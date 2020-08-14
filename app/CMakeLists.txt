@@ -14,13 +14,7 @@ find_library(
 
 message("CPU ABI: ${CMAKE_ANDROID_ARCH_ABI}")
 
-if (${CMAKE_ANDROID_ARCH_ABI} EQUAL "armeabi")
-    message("equals true")
-else ()
-    message("equals false")
-endif ()
-
-if (${CMAKE_ANDROID_ARCH_ABI} EQUAL "armeabi")
+if (${CMAKE_ANDROID_ARCH_ABI} EQUAL "armeabi") ## 根据ABI的不同, 复制so文件到对应的文件夹
     file(COPY ${GO_BUILD_PATH}/${CMAKE_ANDROID_ARCH_ABI}/libadd.so DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/${CMAKE_ANDROID_ARCH_ABI}) # 复制库文件
 else ()
     file(COPY ${SRC}/libadd.so DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/${CMAKE_ANDROID_ARCH_ABI}) # 复制库文件

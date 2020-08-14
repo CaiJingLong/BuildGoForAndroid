@@ -3,7 +3,6 @@ package top.kikt.usegolibrary;
 public class JniLibrary {
 
     static {
-//        System.loadLibrary("add");
         System.loadLibrary("my_jni");
     }
 
