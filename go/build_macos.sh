@@ -1,0 +1,1 @@
+go build -buildmode=c-archive -o output/macos/libadd.dylib add_library.go
