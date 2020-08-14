@@ -9,7 +9,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView.text = JniLibrary.add(10, 20).toString()
+        textView.text = "come from jni ${JniLibrary.add(300, 150)}"
+
+        textView2.text = "come from jni ${JniLibrary.remove(300, 150)}"
     }
 
 
